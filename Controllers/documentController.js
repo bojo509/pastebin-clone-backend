@@ -3,7 +3,7 @@ import Document from "../Models/Document.js";
 //Works
 export const getDocuments = async (req, res) => {
     try {
-        const documents = await Document.findOne();
+        const documents = await Document.find();
         if (documents.length === 0) {
             return res.status(404).json({ message: `No documents found` });
         }
